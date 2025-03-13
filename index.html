@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <script>
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+        });
+    
+        document.addEventListener("keydown", function(e) {
+            if (e.ctrlKey && (e.key === "u" || e.key === "s" || e.key === "i" || e.key === "j" || e.key === "c")) {
+                e.preventDefault();
+            }
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn Linktree</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+            margin-bottom: 10px;
+        }
+        .name {
+            font-family: 'Playwrite HU', cursive;
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .social-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Tekst en icoon correct positioneren */
+    gap: 15px; /* Ruimte tussen icoon en tekst */
+    width: 240px; /* Brede knoppen */
+    height: 55px; /* Consistente hoogte */
+    font-weight: bold;
+}
+
+.social-links a i {
+    font-size: 22px; /* Iconen groter maken */
+    width: 30px; /* Zorgt ervoor dat iconen altijd in een rechte lijn staan */
+    text-align: center;
+    flex-shrink: 0; /* Voorkomt dat iconen verkleinen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a span {
+    flex-grow: 1; /* Zorgt ervoor dat de tekst de juiste ruimte krijgt */
+    text-align: center; /* Tekst perfect centreren */
+    display: flex;
+    align-items: center; /* Houdt de tekst verticaal gecentreerd */
+    justify-content: center; /* Zorgt ervoor dat de tekst horizontaal gecentreerd is */
+    height: 100%; /* Zorgt ervoor dat de tekst de volledige hoogte gebruikt */
+}
+
+
+        .facebook { background: #3b5998; }
+        .linkedin { background: #0077b5; }
+        .whatsapp { background: #25d366; }
+        .email { background: #d44638; }
+        .website { background: #1e1e1e; }
+        
+        .social-links a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <img src="jouw-foto.jpeg" alt="Profielfoto" class="profile-pic">
+    <div class="name">Sander Corte</div>
+    <br>
+    <div class="social-links">
+        <a href="https://www.facebook.com/jouwprofiel" target="_blank" class="facebook">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="https://www.linkedin.com/in/jouwprofiel" target="_blank" class="linkedin">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+        </a>
+        <a href="https://wa.me/jouwnummer" target="_blank" class="whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="mailto:jouwemail@example.com" class="email">
+            <i class="fas fa-envelope"></i> E-mail
+        </a>
+        <a href="https://www.jouwwebsite.com" target="_blank" class="website">
+            <i class="fas fa-globe"></i> Website
+        </a>
+    </div>
+</body>
+</html>
